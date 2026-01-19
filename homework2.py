@@ -8,7 +8,8 @@ st.set_page_config(page_title="제약/의료기기 조달 리스크 대시보드
 # 2. 데이터 로드 및 전처리
 @st.cache_data
 def load_data():
-    file_path = '품목 수출입 총괄 _ 국내통계 - K-stat 수출입 무역통계.xls - sheet1.csv'
+    # 올바른 예
+file_path = '품목 수출입 총괄 _ 국내통계 - K-stat 수출입 무역통계.xls - sheet1.csv'
     # 데이터 상단 빈칸 제외 및 로드
     df = pd.read_csv(file_path, skiprows=3)
     df.columns = ['순번', '코드', '품목명', '24_수출', '24_수출증감', '24_수입', '24_수입증감', '24_교역', 
